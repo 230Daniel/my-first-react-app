@@ -1,4 +1,4 @@
 .Card{
 	width: 300px;
-	background: lightgray;
+	background: var(--card-background);
 }

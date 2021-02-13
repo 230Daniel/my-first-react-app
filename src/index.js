@@ -1,12 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './theme.css';
 import './index.css';
-import Card from './components/card.js'
+import Navbar from './components/navbar.js'
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
+import Page1 from "./page1.js";
+import Page2 from "./page2.js";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Card text="hello"/>
-    <Card text="there"/>
+    <BrowserRouter>
+      <Navbar items={
+        [
+        ["Home", "/home"],
+        ["House", "/house"]
+        ]
+        }/>
+        <Switch>
+          <Route exact path="/" component={Page1} />
+          <Route path="/home/" component={Page1} />
+          <Route exact path="/house/" component={Page2} />
+        </Switch>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
