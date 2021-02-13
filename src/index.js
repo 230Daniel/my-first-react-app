@@ -19,7 +19,7 @@ ReactDOM.render(
         }/>
         <Switch>
           <Route exact path="/" component={Page1} />
-          <Route path="/home/" component={Page1} />
+          <Route exact path="/home/" component={Page1} />
           <Route exact path="/house/" component={Page2} />
           <Route component={Page404}></Route>
         </Switch>
