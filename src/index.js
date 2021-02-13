@@ -7,10 +7,10 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import Page1 from "./page1.js";
 import Page2 from "./page2.js";
+import Page404 from "./page404.js";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
+  <BrowserRouter>
       <Navbar items={
         [
         ["Home", "/home"],
@@ -21,8 +21,8 @@ ReactDOM.render(
           <Route exact path="/" component={Page1} />
           <Route path="/home/" component={Page1} />
           <Route exact path="/house/" component={Page2} />
+          <Route component={Page404}></Route>
         </Switch>
-    </BrowserRouter>
-  </React.StrictMode>,
+    </BrowserRouter>,
   document.getElementById('root')
 );

@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from 'react-helmet'
+import {Link } from "react-router-dom";
 
  function Page2() {
 	 return (
@@ -8,6 +9,9 @@ import { Helmet } from 'react-helmet'
 			  <title>House - My First React App</title>
 		</Helmet>
 		<h1>welcome to da house</h1>
+		<Link to="anything">
+			Make a 404
+		</Link>
 	 </>
 	 );
  }
