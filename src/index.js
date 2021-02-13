@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import Page1 from "./page1.js";
 import Page2 from "./page2.js";
+import Bootstrap from "./pagebs.js";
 import Page404 from "./page404.js";
 
 ReactDOM.render(
@@ -14,13 +15,15 @@ ReactDOM.render(
       <Navbar items={
         [
         ["Home", "/home"],
-        ["House", "/house"]
+        ["House", "/house"],
+        ["Bootstrap", "/bootstrap"]
         ]
         }/>
         <Switch>
           <Route exact path="/" component={Page1} />
           <Route exact path="/home/" component={Page1} />
           <Route exact path="/house/" component={Page2} />
+          <Route exact path="/bootstrap/" component={Bootstrap} />
           <Route component={Page404}></Route>
         </Switch>
     </BrowserRouter>,
