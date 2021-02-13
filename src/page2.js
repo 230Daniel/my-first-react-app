@@ -1,16 +1,14 @@
 import React from "react";
-import Card from "./components/card.js";
+import { Helmet } from 'react-helmet'
 
  function Page2() {
 	 return (
-		 <div>
-			<Card text="hello house"/>
-			<Card text="hello house"/>
-			<Card text="hello house"/>
-			<Card text="hello house"/>
-			<Card text="hello house"/>
-			<Card text="hello house"/>
-		 </div>
+		<>
+		<Helmet>
+			  <title>House - My First React App</title>
+		</Helmet>
+		<h1>welcome to da house</h1>
+	 </>
 	 );
  }
 
