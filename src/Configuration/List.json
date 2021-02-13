@@ -1,0 +1,15 @@
+{
+	"list":
+	[
+		{
+			"name": "cool",
+			"description": "super gamer"
+		},
+		{
+			"name": "epic",
+			"description": "pretty neat"
+		}
+	],
+
+	"offer": false
+}
