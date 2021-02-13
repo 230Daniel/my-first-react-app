@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Page1 from "./page1.js";
 import Page2 from "./page2.js";
 import Bootstrap from "./pagebs.js";
+import Search from "./search.js";
 import Page404 from "./page404.js";
 
 ReactDOM.render(
@@ -24,6 +25,7 @@ ReactDOM.render(
           <Route exact path="/home/" component={Page1} />
           <Route exact path="/house/" component={Page2} />
           <Route exact path="/bootstrap/" component={Bootstrap} />
+          <Route path="/search/" component={Search}/>
           <Route component={Page404}></Route>
         </Switch>
     </BrowserRouter>,

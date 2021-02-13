@@ -5,6 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
+import Link from "react-router-dom/Link";
 
 class MyNavbar extends React.Component {
 
@@ -19,30 +20,19 @@ class MyNavbar extends React.Component {
 		return(
 			<Navbar bg="light" expand="lg">
 				<Navbar.Collapse id="basic-navbar-nav">
-					<Navbar.Brand href="bootstrap">Bootstrap Page</Navbar.Brand>
+					<Navbar.Brand as={Link} to="">React App</Navbar.Brand>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
 					<Nav className="mr-auto">
-						<Nav.Link href="home">Home</Nav.Link>
-						<Nav.Link href="house">House</Nav.Link>
-						<NavDropdown title="Dropdown" id="basic-nav-dropdown">
-							<NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-							<NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-							<NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-							<NavDropdown.Divider />
-							<NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-						</NavDropdown>
+						<Nav.Link as={Link} to="house">House</Nav.Link>
+						<Nav.Link as={Link} to="bootstrap">Bootstrap</Nav.Link>
 					</Nav>
 					<Form inline>
 						<FormControl type="text" placeholder="Search" className="mr-sm-2" onChange={e => this.setState({searchQuery: e.target.value})} />
-						<Button variant="outline-success" onClick={() => this.search()}>Search</Button>
+						<Button as={Link} to={`search?q=${this.state.searchQuery}`} variant="outline-success">Search</Button>
 					</Form>
 				</Navbar.Collapse>
 			</Navbar>
 		);
-	}
-
-	search(){
-		console.log(`Searched for ${this.state.searchQuery}`)
 	}
 }
 

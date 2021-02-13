@@ -10,6 +10,8 @@ import MyNavbar from './components/mynavbar.js'
 				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin/>
         	</Helmet>
 			<MyNavbar></MyNavbar>
+			<h2 className="display-3">Bootstrap</h2>
+			<h3>what a nice bootstrap page, I sure hope the search bar works</h3>
 		 </>
 	   
 	 );
